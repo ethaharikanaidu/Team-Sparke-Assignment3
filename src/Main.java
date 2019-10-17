@@ -10,7 +10,7 @@ public class Main {
 		System.out.println("Prioritizer1 implementation demo - Order preserved after insertion phase");
 		System.out.println("-----------------------------------");
 		System.out.println("Inserting integer values....");
-		Prioritizer p1 = new Prioritizer1();
+		Prioritizer p1 = new Prioritizer1(8);
 		p1.insert(1);
 		p1.insert(4);
 		p1.insert(6);
@@ -37,7 +37,7 @@ public class Main {
 		System.out.println("Inserting integer values....");
 		
 //		prioritizer class 2
-		Prioritizer p2 = new Prioritizer2();
+		Prioritizer p2 = new Prioritizer2(3);
 		p2.insert('c');
 		p2.insert('v');
 		p2.insert('i');
@@ -64,7 +64,7 @@ public class Main {
 		System.out.println("Inserting integer values....");
 
 //		prioritizer class 3
-		Prioritizer p3 = new Prioritizer3();
+		Prioritizer p3 = new Prioritizer3(4);
 		p3.insert("Jhon");
 		p3.insert("Shine");
 		p3.insert("Warne");

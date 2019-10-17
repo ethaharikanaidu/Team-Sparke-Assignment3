@@ -1,17 +1,32 @@
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-
+/*
+ * This class is implemented by Harika Etha
+ */
 public class Prioritizer1  implements Prioritizer<Integer> {
 	
 	private boolean Flag=true;
 	private List<Integer> data = new ArrayList<Integer>();
+	private int max_size=10;
+	
+	public Prioritizer1(int max_size) {
+		this.max_size=max_size;
+	}
 
 	@Override
 	public void insert(Integer t) {
-		data.add(t);
+		if(data.size()!=this.max_size)
+		{
+			data.add(t);
+			System.out.println("Item inserted successfully!");
+		}
+		else {
+			System.out.println("LIST FULL: Can't insert new items. Remove a few items to insert new ones!");
+		}
 	}
 
 	@Override

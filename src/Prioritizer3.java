@@ -9,12 +9,23 @@ import java.util.Random;
 public class Prioritizer3 implements Prioritizer<String> {
 	private boolean Flag=true;
 	private List<String> data = new ArrayList<>();
+	private int max_size=10;
+	
+	public Prioritizer3(int max_size) {
+		this.max_size=max_size;
+	}
 
 	@Override
 	public void insert(String t) {
-		data.add(t);
+		if(data.size()!=this.max_size)
+		{
+			data.add(t);
+			System.out.println("Item inserted successfully!");
+		}
+		else {
+			System.out.println("LIST FULL: Can't insert new items. Remove a few items to insert new ones!");
+		}
 	}
-
 	@Override
 	public void changPhase() {
 		Flag=!Flag;
